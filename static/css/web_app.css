@@ -1,0 +1,141 @@
+/* web_app.css */
+
+/* Reset & Universal Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    color: #FFF;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #2E4053, #1C2833);
+    overflow: hidden;
+}
+
+/* Main Container Styling */
+.diagnosis-container {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    padding: 2rem;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #3E4A89, #283655);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    animation: float 5s ease-in-out infinite;
+}
+
+/* Title Styling */
+h1 {
+    font-size: 2.8rem;
+    color: #9AABD8;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Bubble Input Styling */
+.input-bubble {
+    margin: 1.5rem 0;
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    background: rgba(200, 200, 255, 0.1);
+    padding: 1.2rem;
+    border-radius: 50px;
+    backdrop-filter: blur(8px);
+    animation: bubble-float 6s ease-in-out infinite;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.input-bubble input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: #F0F4FA;
+    font-size: 1rem;
+    padding: 0;
+    text-align: center;
+}
+
+.input-bubble input::placeholder {
+    color: rgba(240, 244, 250, 0.7);
+}
+
+/* Diagnose Button Styling */
+.diagnose-button {
+    background: linear-gradient(90deg, #556080, #3C4D70);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #D1E8FF;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 10px 20px rgba(80, 100, 150, 0.5);
+}
+
+.diagnose-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 15px 25px rgba(80, 100, 150, 0.7);
+}
+
+.diagnose-button span {
+    position: relative;
+    z-index: 10;
+}
+
+/* Predicted Disease Output Styling */
+#predicted_disease {
+    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    background: rgba(62, 74, 137, 0.1);
+    color: #A3C6FF;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Keyframe Animations */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes bubble-float {
+
+    0%,
+    100% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

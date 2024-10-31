@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseases Diagnosis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/web_app.css') }}">
+</head>
+
+<body>
+    <div class="diagnosis-container">
+        <h1>🧬 Diagnose Me</h1>
+        <div class="input-bubble">
+            <input type="text" id="symptoms_input" placeholder="Describe Symptoms Here">
+        </div>
+        <div class="input-bubble">
+            <input type="text" id="lab_test_input" placeholder="Enter Lab Test Result">
+        </div>
+        <button onclick="Diagnose_Patient()" class="diagnose-button">
+            <span>🔍 Diagnose</span>
+        </button>
+        <div id="predicted_disease"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.7/axios.min.js"></script>
+    <script src="{{ url_for('static', filename='js/web_app.js') }}"></script>
+</body>
+
+</html>
