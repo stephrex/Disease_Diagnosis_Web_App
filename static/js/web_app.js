@@ -16,4 +16,7 @@ const Diagnose_Patient = () => {
             console.log(response)
             predicted_disease_input.textContent = response.data.prediction
         })
+        .catch(error => {
+            console.error("Error fetching prediction:", error);
+        });
 }
