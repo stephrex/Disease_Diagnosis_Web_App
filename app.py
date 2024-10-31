@@ -1,7 +1,14 @@
 from flask import Flask, render_template, jsonify, request
 from flask_cors import CORS
 import numpy as np
-import tensorflow as tf
+import subprocess
+import sys
+try:
+    import tensorflow as tf
+except ImportError:
+    subprocess.check_call(
+        [sys.executable, "-m", "pip", "install", "tensorflow"])
+    import tensorflow as tf  # Import TensorFlow after installation
 import nltk
 import re
 from nltk.tokenize import word_tokenize
