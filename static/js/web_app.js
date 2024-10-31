@@ -5,7 +5,7 @@ const Diagnose_Patient = () => {
 
     const combined_text = `${symptoms} ${lab_test}`
     console.log(combined_text)
-    axios.post('http://127.0.0.1:8080/predict',
+    axios.post('https://disease-diagnosis-web-app.onrender.com/predict',
         { content: combined_text },
         {
             headers: {
