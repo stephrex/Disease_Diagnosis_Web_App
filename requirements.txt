@@ -1,4 +1,5 @@
 ﻿nltk
 flask
+flask_cors
 tensorflow
 numpy
